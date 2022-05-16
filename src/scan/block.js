@@ -1,3 +1,4 @@
+const { handleExtrinsics } = require("./business/extrinsic");
 const { handleEvents } = require("./business/event");
 
 function extractBlockTime(extrinsics) {
@@ -25,7 +26,7 @@ function getBlockIndexer(block) {
 async function scanNormalizedBlock(block, blockEvents) {
   // handle the business
   const blockIndexer = getBlockIndexer(block);
-  // await handleExtrinsics(block.extrinsics, blockEvents, blockIndexer);
+  await handleExtrinsics(block.extrinsics, blockEvents, blockIndexer);
   await handleEvents(blockEvents, block.extrinsics, blockIndexer);
 }
 
