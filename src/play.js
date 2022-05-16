@@ -3,7 +3,8 @@ const { getApi } = require("./chain/api");
 
 const blockHeights = [
   // 10172818, // child bounty 0 added
-  10173886, // propose curator
+  // 10173886, // propose curator
+  10178252, // accept curator
 ];
 
 ;(async () => {

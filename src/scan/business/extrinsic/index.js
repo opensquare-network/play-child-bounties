@@ -1,3 +1,4 @@
+const { handleAcceptCurator } = require("./child-bounties/accept-curator");
 const { handleProposeCurator } = require("./child-bounties/propose-curator");
 const { calcMultisigAddress } = require("../../../utils/multisig");
 const { findBlockApi } = require("../../../chain/blockApi");
@@ -36,7 +37,8 @@ function isExtrinsicSuccess(events) {
 }
 
 async function handleCall(call, author, extrinsicIndexer, eventStatus) {
-  await handleProposeCurator(...arguments)
+  await handleProposeCurator(...arguments);
+  await handleAcceptCurator(...arguments);
 }
 
 async function unwrapProxy(call, signer, extrinsicIndexer, eventStatus) {
