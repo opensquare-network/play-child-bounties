@@ -13,6 +13,7 @@ const ChildBountiesEvents = Object.freeze({
 const ChildBountiesMethods = Object.freeze({
   proposeCurator: "proposeCurator",
   acceptCurator: "acceptCurator",
+  unassignCurator: "unassignCurator",
 });
 
 const MultisigMethods = Object.freeze({
