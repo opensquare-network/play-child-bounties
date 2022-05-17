@@ -2,10 +2,11 @@ const { scanNormalizedBlock } = require("./scan/block");
 const { getApi } = require("./chain/api");
 
 const blockHeights = [
-  10172818, // child bounty 0 added
+  // 10172818, // child bounty 0 added
   // 10173886, // propose curator
   // 10178252, // accept curator
   // 10178390, // child bounty awarded
+  10316515, // child bounty claimed
 ];
 
 ;(async () => {

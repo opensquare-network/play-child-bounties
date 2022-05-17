@@ -1,5 +1,6 @@
 const { handleAwarded } = require("./awarded");
 const { handleAdded } = require("./added");
+const { handleClaimed } = require("./claimed");
 const { Modules, ChildBountiesEvents } = require("../../../../consts/child");
 
 function isTargetEvent(section) {
@@ -16,6 +17,8 @@ async function handleChildBountiesEvents(event, indexer, extrinsic) {
     await handleAdded(...arguments);
   } else if (ChildBountiesEvents.Awarded === method) {
     await handleAwarded(...arguments);
+  } else if (ChildBountiesEvents.Claimed === method) {
+    await handleClaimed(...arguments);
   }
 }
 

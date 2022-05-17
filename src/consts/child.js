@@ -7,6 +7,7 @@ const Modules = Object.freeze({
 const ChildBountiesEvents = Object.freeze({
   Added: "Added",
   Awarded: "Awarded",
+  Claimed: "Claimed",
 })
 
 const ChildBountiesMethods = Object.freeze({
